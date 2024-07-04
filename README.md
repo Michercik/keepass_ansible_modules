@@ -22,7 +22,10 @@ You also need to copy needed modules to your ansible `library` directory and fil
 
 #### WARNING! Be mindful to not expose your secrets when using [keepass_get_entry](library/keepass_get_entry.py) module.
 
-More detailed documentation about each module is inside its file.
+More detailed documentation about each module is inside its file or when using command: 
+```bash
+ansible-doc <module_name>
+```
 
 ## Example playbook
 

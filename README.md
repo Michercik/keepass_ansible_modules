@@ -14,7 +14,7 @@ You also need to copy needed modules to your ansible `library` directory and fil
 |------|-------------|
 | [`keepass_create_db`](library/keepass_create_db.py)| Creates keepass database. |
 | [`keepass_create_entry`](library/keepass_create_entry.py)| Creates entry (and groups if needed) in keepass database. |
-| [`keepass_create_group`](library/keepass_create_group.py)| Creates emptry group in keepass database. |
+| [`keepass_create_group`](library/keepass_create_group.py)| Creates empty group in keepass database. |
 | [`keepass_create_keyfile`](library/keepass_create_keyfile.py)| Creates keyfile. |
 | [`keepass_get_entry`](library/keepass_get_entry.py)| Gets entry details from keepass database. |
 | [`keepass_remove_entry`](library/keepass_remove_entry.py)| Removes entry from keepass database. |
@@ -73,7 +73,6 @@ More detailed documentation about each module is inside its file.
           group: "{{ item.group | default(None) }}"
           expiry_time: "{{ item.expiry_time | default(None) }}"
       loop: "{{ keepass_db_users }}"
-
 
     - name: Remove entries
       keepass_remove_entry:

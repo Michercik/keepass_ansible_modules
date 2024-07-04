@@ -1,0 +1,4 @@
+ansible>=7.7.0
+ansible_core>=2.14.14
+filelock>=3.15.4
+pykeepass>=4.0.7.post1

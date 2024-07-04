@@ -26,33 +26,33 @@ description: This module removes entry in KeePass database.
 options:
     database:
         description:
-            - Path to KeePass database. Alternative name: path.
+            - "Path to KeePass database. Alternative name: path."
         required: true
         type: str
     password:
         description:
-            - Password of KeePass database. Required if keyfile is not defined.
+            - "Password of KeePass database. Required if keyfile is not defined."
         required: false
         type: str
     keyfile:
         description:
-            - Path to the KeePass keyfile. Must already exist. Required if password is not defined.
+            - "Path to the KeePass keyfile. Must already exist. Required if password is not defined."
         required: false
         type: str
     timeout:
         description:
-            - Time before aquiring lock to database file fails (in seconds).
+            - "Time before aquiring lock to database file fails (in seconds)."
         required: false
         default: 60
         type: int
     entry:
         description:
-            - Title of entry to be removed.
+            - "Title of entry to be removed."
         required: true
         type: str
     group:
         description:
-            - Path to the group where entry is present. Each group must by separated by '/'. Example: test-group/subgroup/subsubgroup.
+            - "Path to the group where entry is present. Each group must by separated by '/'. Example: test-group/subgroup/subsubgroup."
         required: false
         default: root group
         type: str

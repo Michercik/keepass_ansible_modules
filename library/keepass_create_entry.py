@@ -15,86 +15,87 @@ DOCUMENTATION = r'''
 ---
 module: keepass_create_entry
 
-short_description: This module creates entry in KeePass database.
+short_description: This module creates entry in a KeePass database.
 
 # If this is part of a collection, you need to use semantic versioning,
 # i.e. the version is of the form "2.5.0" and not "2.4".
 version_added: "1.0.0"
 
-description: This module creates entry in KeePass database.
+description: This module creates entry in a KeePass database.
 
 options:
     database:
         description:
-            - Path to KeePass database. Alternative name: path.
+            - "Path to KeePass database. Alternative name: path."
         required: true
         type: str
     password:
         description:
-            - Password of KeePass database. Required if keyfile is not defined.
+            - "Password of KeePass database. Required if keyfile is not defined."
         required: false
         type: str
     keyfile:
         description:
-            - Path to the KeePass keyfile. Must already exist. Required if password is not defined.
+            - "Path to the KeePass keyfile. Must already exist. Required if password is not defined."
         required: false
         type: str
     timeout:
         description:
-            - Time before aquiring lock to database file fails (in seconds).
+            - "Time before aquiring lock to database file fails (in seconds)."
         required: false
         default: 60
         type: int
     entry:
         description:
-            - Entry to be added to KeePass database.
+            - "Entry to be added to KeePass database."
         required: true
-        type: dict
-        options:
+        type: list
+        elements: dict
+        suboptions:
             title:
                 description:
-                    - Title of entry.
+                    - "Title of entry."
                 required: true
                 type: str
             group:
                 description:
-                    - Path to the group where entry must be added. Each group must by separated by '/'. Example: test-group/subgroup/subsubgroup.
+                    - "Path to the group where entry must be added. Each group must by separated by '/'. Example: test-group/subgroup/subsubgroup."
                 required: false
                 default: root group
                 type: str
             username:
                 description:
-                    - Username of entry.
+                    - "Username of entry."
                 required: false
                 type: str
             password:
                 description:
-                    - Password of entry.
+                    - "Password of entry."
                 required: false
                 type: str
             url:
                 description:
-                    - URL of entry.
+                    - "URL of entry."
                 required: false
                 type: str
             expiry_time:
                 description:
-                    - Entry expiry time. Must be in format: "YYYY-MM-DD HH:MM:SS+TZOFFSET" (see examples below).
+                    - "Entry expiry time. Must be in format: 'YYYY-MM-DD HH:MM:SS+TZOFFSET' (see examples below)."
                 required: false
                 type: str
             notes:
                 description:
-                    - Entry notes.
+                    - "Entry notes."
                 required: false
                 type: str
             tags:
                 description:
-                    - Entry tags. Must be comma separated.
+                    - "Entry tags. Must be comma separated."
                 required: false
                 type: str
             force_creation:
                 description:
-                    - Always create new entry.
+                    - "Always create new entry."
                 required: false
                 type: bool
                 default: false

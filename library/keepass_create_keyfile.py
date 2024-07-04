@@ -13,18 +13,18 @@ DOCUMENTATION = r'''
 ---
 module: keepass_create_keyfile
 
-short_description: This module creates KeePass keyfile.
+short_description: This module creates a KeePass keyfile.
 
 # If this is part of a collection, you need to use semantic versioning,
 # i.e. the version is of the form "2.5.0" and not "2.4".
 version_added: "1.0.0"
 
-description: This module creates KeePass keyfile.
+description: This module creates a KeePass keyfile.
 
 options:
     path:
         description:
-            - Path to keyfile.
+            - "Path to keyfile."
         required: true
         type: str
 

@@ -32,17 +32,17 @@ description: This module creates KeePass database.
 options:
     database:
         description:
-            - Path to KeePass database. Alternative name: path.
+            - "Path to KeePass database. Alternative name: path."
         required: true
         type: str
     password:
         description:
-            - Password of KeePass database. Required if keyfile is not defined.
+            - "Password of KeePass database. Required if keyfile is not defined."
         required: false
         type: str
     keyfile:
         description:
-            - Path to the KeePass keyfile. Must already exist. Required if password is not defined.
+            - "Path to the KeePass keyfile. Must already exist. Required if password is not defined."
         required: false
         type: str
 

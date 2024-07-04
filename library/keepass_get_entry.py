@@ -15,39 +15,38 @@ DOCUMENTATION = r'''
 ---
 module: keepass_get_entry
 
-short_description: This module gets entry from KeePass database.
+short_description: This module gets entry from a KeePass database.
 
 # If this is part of a collection, you need to use semantic versioning,
 # i.e. the version is of the form "2.5.0" and not "2.4".
 version_added: "1.0.0"
 
-description: This module gets entry from KeePass database.
+description: This module gets entry from a KeePass database.
 
 options:
     name:
         description:
-            - Title of the entry in KeePass database. Alternative name: title.
+            - "Title of the entry in KeePass database. Alternative name: title."
         required: true
         type: str
     group:
         description:
-            - Path to the group where entry must be added. Each group must by separated by '/'. If not defined, it will return first match.
-              Example: test-group/subgroup/subsubgroup.
+            - "Path to the group where entry must be added. Each group must by separated by '/'. If not defined, it will return first match. Example: test-group/subgroup/subsubgroup."
         required: false
         type: str
     database:
         description:
-            - Path to KeePass database. Alternative name: path.
+            - "Path to KeePass database. Alternative name: path."
         required: true
         type: str
     password:
         description:
-            - Password of KeePass database. Required if keyfile is not defined.
+            - "Password of KeePass database. Required if keyfile is not defined."
         required: false
         type: str
     keyfile:
         description:
-            - Path to the KeePass keyfile. Must already exist. Required if password is not defined.
+            - "Path to the KeePass keyfile. Must already exist. Required if password is not defined."
         required: false
         type: str
 
